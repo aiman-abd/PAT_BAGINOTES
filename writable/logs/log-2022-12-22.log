@@ -1,0 +1,52 @@
+CRITICAL - 2022-12-22 09:14:50 --> Invalid file: layout/dashboard-layout.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('layout/dashboard-layout.php')
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->render('layout/dashboard-layout', [], true)
+ 3 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('dashboard/home', [], true)
+ 4 APPPATH\Controllers\UserController.php(10): view('dashboard/home')
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\UserController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-22 09:15:20 --> Invalid file: layout/dashboard-layout.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('layout/dashboard-layout.php')
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->render('layout/dashboard-layout', [], true)
+ 3 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('dashboard/home', [], true)
+ 4 APPPATH\Controllers\UserController.php(10): view('dashboard/home')
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\UserController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-22 09:22:19 --> Invalid file: dashboard/home.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('dashboard/home.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('dashboard/home', [], true)
+ 3 APPPATH\Controllers\UserController.php(10): view('dashboard/home')
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\UserController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-22 19:02:42 --> Invalid file: dashboard/Probstat.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('dashboard/Probstat.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('dashboard/Probstat', [], true)
+ 3 APPPATH\Controllers\UserController.php(21): view('dashboard/Probstat', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\UserController->probstat()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-22 19:04:29 --> Invalid file: dashboard/Probstat.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('dashboard/Probstat.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('dashboard/Probstat', [], true)
+ 3 APPPATH\Controllers\UserController.php(21): view('dashboard/Probstat', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\UserController->probstat()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
