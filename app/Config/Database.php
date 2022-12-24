@@ -35,7 +35,7 @@ class Database extends Config
         'hostname' => 'localhost',
         'username' => 'root',
         'password' => '',
-        'database' => 'hiburan',
+        'database' => 'bagi_notes',
         'DBDriver' => 'MySQLi',
         'DBPrefix' => '',
         'pConnect' => false,
