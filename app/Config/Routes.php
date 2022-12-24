@@ -39,10 +39,15 @@ $routes->get('/', 'Home::index');
 
 $routes->group('/user', function($routes){
     $routes->get('home','UserController::index',['as'=>'user.home']);
-    $routes->get('home','UserController::tambahjadwal',['as'=>'user.tambahjadwal']);
     $routes->get('kelas','UserController::kelas',['as'=>'user.kelas']);
     $routes->get('catatansaya','UserController::catatansaya',['as'=>'user.catatansaya']);
     $routes->get('pengaturan','UserController::pengaturan',['as'=>'user.pengaturan']);
+});
+$routes->group('/user/kelas', function($routes){
+    $routes->get('probstat','UserController::probstat',['as'=>'user.probstat']);
+});
+$routes->group('/user/catatansaya', function($routes){
+    $routes->get('tambahcatatan','UserController::tambahcatatan',['as'=>'user.tambahcatatan']);
 });
 
 /*

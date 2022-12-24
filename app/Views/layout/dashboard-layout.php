@@ -17,24 +17,12 @@
     <!-- <meta name="description" content="CoreUI - Open Source Bootstrap Admin Template">
     <meta name="author" content="Łukasz Holeczek"> -->
     <!-- <meta name="keyword" content="Bootstrap,Admin,Template,Open,Source,jQuery,CSS,HTML,RWD,Dashboard"> -->
-    <title><?= (isset($pageTitle)) ? $pageTitle : 'Document'; ?></title>
+    <title>BagiNotes | <?= (isset($pageTitle)) ? $pageTitle : 'Document'; ?></title>
     <base href="/">
-    <link rel="apple-touch-icon" sizes="57x57" href="dist/assets/favicon/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="dist/assets/favicon/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="dist/assets/favicon/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="dist/assets/favicon/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="dist/assets/favicon/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="dist/assets/favicon/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="dist/assets/favicon/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="dist/assets/favicon/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="dist/assets/favicon/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="dist/assets/favicon/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="dist/assets/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="dist/assets/favicon/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="dist/assets/favicon/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="128x128" href="dist/assets/img/128x128/Logo Icon Dark.png">
     <link rel="manifest" href="dist/assets/favicon/manifest.json">
     <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="dist/assets/favicon/ms-icon-144x144.png">
+    <meta name="msapplication-TileImage" content="dist/assets/img/256x256/Logo Icon Dark.png">
     <meta name="theme-color" content="#ffffff">
     <!-- Vendors styles-->
     <link rel="stylesheet" href="dist/vendors/simplebar/css/simplebar.css">
@@ -61,6 +49,7 @@
     <link href="dist/vendors/@coreui/chartjs/css/coreui-chartjs.css" rel="stylesheet">
   </head>
   <body>
+
     <!-- Side -->
     <div class="sidebar sidebar-dark sidebar-fixed" id="sidebar">
       <div class="sidebar-brand d-none d-md-flex">
@@ -71,16 +60,16 @@
             <svg class="nav-icon">
               <use xlink:href="dist/vendors/@coreui/icons/svg/free.svg#cil-home"></use>
             </svg>Home</a></li>
-        <!-- <li class="nav-item"><a class="nav-link <?= (current_url() == base_url('user/kelas')) ? 'active' : ''; ?>" href="<?= route_to('user.kelas') ?>">
+        <li class="nav-item"><a class="nav-link <?= (current_url() == base_url('user/kelas')) ? 'active' : ''; ?>" href="<?= route_to('user.kelas') ?>">
             <svg class="nav-icon">
-              <use xlink:href="dist/vendors/@coreui/icons/svg/free.svg#cil-book"></use>
-            </svg> Nyobain</a></li> -->
+              <use xlink:href="dist/vendors/@coreui/icons/svg/free.svg#cil-room"></use>
+            </svg> Grup Kelas</a></li>
         <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
             <svg class="nav-icon">
               <use xlink:href="dist/vendors/@coreui/icons/svg/free.svg#cil-book"></use>
             </svg> Kelas</a>
           <ul class="nav-group-items">
-            <li class="nav-item"><a class="nav-link <?= (current_url() == base_url('user/kelas')) ? 'active' : ''; ?>" href="<?= route_to('user.kelas') ?>"><span class="nav-icon"></span>Probabilitas dan Statistika</a></li>
+            <li class="nav-item"><a class="nav-link <?= (current_url() == base_url('user/probstat')) ? 'active' : ''; ?>" href="<?= route_to('user.probstat') ?>"><span class="nav-icon"></span>Probabilitas dan Statistika</a></li>
           </ul>
         </li>
         <li class="nav-item"><a class="nav-link <?= (current_url() == base_url('user/catatansaya')) ? 'active' : ''; ?>" href="<?= route_to('user.catatansaya') ?>">
