@@ -72,10 +72,6 @@
             <svg class="nav-icon">
               <use xlink:href="dist/vendors/@coreui/icons/svg/free.svg#cil-notes"></use>
             </svg> Catatan Saya</a></li>
-        <li class="nav-item"><a class="nav-link " href="https://www.ilovepdf.com/">
-            <svg class="nav-icon">
-              <use xlink:href="dist/vendors/@coreui/icons/svg/free.svg#cil-loop"></use>
-            </svg> Ilovepdf</a></li>
             <li class="nav-item"><a class="nav-link <?= (current_url() == base_url('user/pengaturan')) ? 'active' : ''; ?>" href="<?= route_to('user.pengaturan') ?>">
             <svg class="nav-icon">
               <use xlink:href="dist/vendors/@coreui/icons/svg/free.svg#cil-settings"></use>
