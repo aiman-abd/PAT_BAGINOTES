@@ -2,6 +2,9 @@
 
 namespace App\Controllers;
 
+use App\Controllers\BaseController;
+use App\Models\Model_catatan;
+
 
 class UserController extends BaseController
 {
@@ -10,20 +13,33 @@ class UserController extends BaseController
         $data['pageTitle'] = 'Home';
         return view('dashboard/Home', $data);
     }
-    public function tambahjadwal()
+    public function tambahcatatan()
     {
-        $data['pageTitle'] = 'Tambah Jadwal';
-        return view('crud/Tambahjadwal', $data);
+        $data['pageTitle'] = 'Tambah Catatan';
+        return view('crud/Tambahcatatan', $data);
     }
     public function kelas()
     {
         $data['pageTitle'] = 'Kelas';
         return view('dashboard/Kelas', $data);
     }
+    public function probstat()
+    {
+        $data['pageTitle'] = 'Probabilitas dan Statistika';
+        return view('dashboard/Probstat', $data);
+    }
     public function catatansaya()
     {
         $data['pageTitle'] = 'Catatan Saya';
         return view('dashboard/Catatansaya', $data);
+
+        // $Model_catatan = new Model_catatan();
+        // $catatan = $Model_catatan->findAll();
+        // $data = [
+        //     'catatan' => $catatan
+        // ];
+
+        // return view('user/catatansaya', $data);
     }
     public function pengaturan()
     {
