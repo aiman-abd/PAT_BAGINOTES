@@ -26,7 +26,7 @@
     <meta name="theme-color" content="#ffffff">
     <!-- Vendors styles-->
     <link rel="stylesheet" href="dist/vendors/simplebar/css/simplebar.css">
-    <link rel="stylesheet" href="css/dist/vendors/simplebar.css">
+    <link rel="stylesheet" href="dist/css/vendors/simplebar.css">
     <!-- Main styles for this application-->
     <link href="dist/css/style.css" rel="stylesheet">
     <!-- We use those styles to show code examples, you should remove them in your application.-->
@@ -53,7 +53,7 @@
     <!-- Side -->
     <div class="sidebar sidebar-dark sidebar-fixed" id="sidebar">
       <div class="sidebar-brand d-none d-md-flex">
-        <img class="logo" src="dist/assets/img/128x128/Logo Icon Text Light.png" alt="Baginotes Logo">
+      <a class="nav-link <?= (current_url() == base_url('user/home')) ? 'active' : ''; ?>" href="<?= route_to('user.home') ?>"><img class="logo" src="dist/assets/img/128x128/Logo Icon Text Light.png" alt="Baginotes Logo"></a>
       </div>
       <ul class="sidebar-nav" data-coreui="navigation" data-simplebar="">
         <li class="nav-item"><a class="nav-link <?= (current_url() == base_url('user/home')) ? 'active' : ''; ?>" href="<?= route_to('user.home') ?>">
@@ -145,7 +145,7 @@
         </div >
       </div>
       <footer class="footer">
-        <div class="ms-auto">Powered by&nbsp;<a href="<?= base_url(); ?>">Kelompok 4</a></div>
+        <div class="ms-auto">Powered by&nbsp;<a href="<?= base_url(); ?>">Kelompok 6</a></div>
       </footer>
     </div>
     <!-- CoreUI and necessary plugins-->
@@ -155,7 +155,7 @@
     <script src="dist/vendors/chart.js/js/chart.min.js"></script>
     <script src="dist/vendors/@coreui/chartjs/js/coreui-chartjs.js"></script>
     <script src="dist/vendors/@coreui/utils/js/coreui-utils.js"></script>
-    <script src="js/main.js"></script>
+    <script src="dist/js/main.js"></script>
     <script>
       const triggerTabList = document.querySelectorAll('#myTab button')
       triggerTabList.forEach(triggerEl => {
