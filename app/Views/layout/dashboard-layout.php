@@ -72,6 +72,15 @@
             <svg class="nav-icon">
               <use xlink:href="dist/vendors/@coreui/icons/svg/free.svg#cil-notes"></use>
             </svg> Catatan Saya</a></li>
+            <li class="nav-group" aria-expanded="false"><a class="nav-link nav-group-toggle" href="#">
+            <svg class="nav-icon">
+            <use xlink:href="dist/vendors/@coreui/icons/svg/free.svg#cil-library-add"></use>
+            </svg>Tambah</a>
+            <ul class="nav-group-items" style="height: 0px;">
+            <li class="nav-item"><a class="nav-link" href="<?= route_to('user.tambahkelas') ?>"><span class="nav-icon"></span>Kelas</a></li>
+            <li class="nav-item"><a class="nav-link" href="<?= route_to('user.tambahcatatan') ?>"><span class="nav-icon"></span>Catatan</a></li>
+            </ul>
+            </li>
             <li class="nav-item"><a class="nav-link <?= (current_url() == base_url('user/pengaturan')) ? 'active' : ''; ?>" href="<?= route_to('user.pengaturan') ?>">
             <svg class="nav-icon">
               <use xlink:href="dist/vendors/@coreui/icons/svg/free.svg#cil-settings"></use>
@@ -93,20 +102,6 @@
             <img width="118" height="46" class="logo" src="dist/assets/img/128x128/Logo Icon Text Dark.png" alt="Baginotes Logo">
             </img></a>
           <ul class="header-nav ms-auto">
-            <!-- <nav class="navbar"> -->
-              <form class="nav-item">
-                <div class="input-group">
-                  <span class="input-group-text" id="basic-addon1"><svg class="icon icon-lg">
-                  <use xlink:href="dist/vendors/@coreui/icons/svg/free.svg#cil-search"></use>
-                </svg></a></li></span>
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                </div>
-              </form>
-            <!-- </nav> -->
-            <li class="nav-item"><a class="nav-link" href="#">
-                <svg class="icon icon-lg">
-                  <use xlink:href="dist/vendors/@coreui/icons/svg/free.svg#cil-bell"></use>
-                </svg></a></li>
           </ul>
           <ul class="header-nav ms-3">
             <li class="nav-item dropdown"><a class="nav-link py-0" data-coreui-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
@@ -115,38 +110,13 @@
               <div class="dropdown-menu dropdown-menu-end pt-0">
                 <div class="dropdown-header bg-light py-2">
                   <div class="fw-semibold">Account</div>
-                </div><a class="dropdown-item" href="#">
-                  <svg class="icon me-2">
-                    <use xlink:href="dist/vendors/@coreui/icons/svg/free.svg#cil-bell"></use>
-                  </svg> Updates<span class="badge badge-sm bg-info ms-2">42</span></a><a class="dropdown-item" href="#">
-                  <svg class="icon me-2">
-                    <use xlink:href="dist/vendors/@coreui/icons/svg/free.svg#cil-envelope-open"></use>
-                  </svg> Messages<span class="badge badge-sm bg-success ms-2">42</span></a><a class="dropdown-item" href="#">
-                  <svg class="icon me-2">
-                    <use xlink:href="dist/vendors/@coreui/icons/svg/free.svg#cil-task"></use>
-                  </svg> Tasks<span class="badge badge-sm bg-danger ms-2">42</span></a><a class="dropdown-item" href="#">
-                  <svg class="icon me-2">
-                    <use xlink:href="dist/vendors/@coreui/icons/svg/free.svg#cil-comment-square"></use>
-                  </svg> Comments<span class="badge badge-sm bg-warning ms-2">42</span></a>
-                <div class="dropdown-header bg-light py-2">
-                  <div class="fw-semibold">Settings</div>
-                </div><a class="dropdown-item" href="#">
-                  <svg class="icon me-2">
-                    <use xlink:href="dist/vendors/@coreui/icons/svg/free.svg#cil-user"></use>
-                  </svg> Profile</a><a class="dropdown-item" href="#">
+                </div>
+                <a class="dropdown-item" href="<?= route_to('user.pengaturan') ?>">
                   <svg class="icon me-2">
                     <use xlink:href="dist/vendors/@coreui/icons/svg/free.svg#cil-settings"></use>
-                  </svg> Settings</a><a class="dropdown-item" href="#">
-                  <svg class="icon me-2">
-                    <use xlink:href="dist/vendors/@coreui/icons/svg/free.svg#cil-credit-card"></use>
-                  </svg> Payments<span class="badge badge-sm bg-secondary ms-2">42</span></a><a class="dropdown-item" href="#">
-                  <svg class="icon me-2">
-                    <use xlink:href="dist/vendors/@coreui/icons/svg/free.svg#cil-file"></use>
-                  </svg> Projects<span class="badge badge-sm bg-primary ms-2">42</span></a>
+                  </svg> Settings</a>
                 <div class="dropdown-divider"></div><a class="dropdown-item" href="#">
-                  <svg class="icon me-2">
-                    <use xlink:href="dist/vendors/@coreui/icons/svg/free.svg#cil-lock-locked"></use>
-                  </svg> Lock Account</a><a class="dropdown-item" href="#">
+                  <a class="dropdown-item" href="#">
                   <svg class="icon me-2">
                     <use xlink:href="dist/vendors/@coreui/icons/svg/free.svg#cil-account-logout"></use>
                   </svg> Logout</a>

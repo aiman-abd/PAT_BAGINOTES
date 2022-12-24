@@ -44,6 +44,11 @@
                 </div>
             </div>
         </div>
+        <a class="btn btn-dark" type="button" href="<?= route_to('user.tambahcatatan') ?>">
+            <svg class="icon me-2">
+            <use xlink:href="dist/vendors/@coreui/icons/svg/free.svg#cil-note-add"></use>
+            </svg>Tambah Catatan
+        </a>
     </div>
 </div>
 

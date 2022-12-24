@@ -18,6 +18,11 @@ class UserController extends BaseController
         $data['pageTitle'] = 'Tambah Catatan';
         return view('crud/Tambahcatatan', $data);
     }
+    public function tambahkelas()
+    {
+        $data['pageTitle'] = 'Tambah Kelas';
+        return view('crud/Tambahkelas', $data);
+    }
     public function kelas()
     {
         $data['pageTitle'] = 'Kelas';

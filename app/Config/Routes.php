@@ -49,6 +49,10 @@ $routes->group('/user/kelas', function($routes){
 $routes->group('/user/catatansaya', function($routes){
     $routes->get('tambahcatatan','UserController::tambahcatatan',['as'=>'user.tambahcatatan']);
 });
+$routes->group('/user/tambah', function($routes){
+    $routes->get('tambahcatatan','UserController::tambahcatatan',['as'=>'user.tambahcatatan']);
+    $routes->get('tambahkelas','UserController::tambahkelas',['as'=>'user.tambahkelas']);
+});
 
 /*
  * --------------------------------------------------------------------
