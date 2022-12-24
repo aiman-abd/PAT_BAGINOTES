@@ -4,12 +4,12 @@ namespace App\Database\Migrations;
 
 use CodeIgniter\Database\Migration;
 
-class Catatan extends Migration
+class CatatanKelas extends Migration
 {
     public function up()
     {
         $this->forge->addField([
-            'notes_id' => [
+            'id' => [
                 'type'           => 'INT',
                 'constraint'     => 20,
                 'unsigned'       => true,
@@ -23,17 +23,21 @@ class Catatan extends Migration
                 'type'       => 'VARCHAR',
                 'constraint' => '100',
             ],
+            'penulis' => [
+                'type'       => 'VARCHAR',
+                'constraint' => '255',
+            ],
             'berkas' => [
-                'type'       => 'BLOB',
-                'constraint' => '100',
+                'type'       => 'VARCHAR',
+                'constraint' => '255',
             ],
         ]);
-        $this->forge->addKey('notes_id', true);
-        $this->forge->createTable('catatan');
+        $this->forge->addKey('id', true);
+        $this->forge->createTable('catatan_kelas');
     }
 
     public function down()
     {
-        $this->forge->dropTable('catatan');
+        $this->forge->dropTable('catatan_kelas');
     }
 }

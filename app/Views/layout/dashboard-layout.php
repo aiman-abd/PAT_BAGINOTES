@@ -60,10 +60,6 @@
             <svg class="nav-icon">
               <use xlink:href="dist/vendors/@coreui/icons/svg/free.svg#cil-home"></use>
             </svg>Home</a></li>
-        <li class="nav-item"><a class="nav-link <?= (current_url() == base_url('user/kelas')) ? 'active' : ''; ?>" href="<?= route_to('user.kelas') ?>">
-            <svg class="nav-icon">
-              <use xlink:href="dist/vendors/@coreui/icons/svg/free.svg#cil-room"></use>
-            </svg> Grup Kelas</a></li>
         <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
             <svg class="nav-icon">
               <use xlink:href="dist/vendors/@coreui/icons/svg/free.svg#cil-book"></use>
@@ -80,7 +76,7 @@
             <svg class="nav-icon">
               <use xlink:href="dist/vendors/@coreui/icons/svg/free.svg#cil-loop"></use>
             </svg> Ilovepdf</a></li>
-            <li class="nav-item"><a class="nav-link <?= (current_url() == base_url('user/catatansaya')) ? 'active' : ''; ?>" href="<?= route_to('user.pengaturan') ?>">
+            <li class="nav-item"><a class="nav-link <?= (current_url() == base_url('user/pengaturan')) ? 'active' : ''; ?>" href="<?= route_to('user.pengaturan') ?>">
             <svg class="nav-icon">
               <use xlink:href="dist/vendors/@coreui/icons/svg/free.svg#cil-settings"></use>
             </svg> Pengaturan</a></li>
