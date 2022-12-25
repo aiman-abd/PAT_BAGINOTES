@@ -9,6 +9,10 @@ use CodeIgniter\Filters\Honeypot;
 use CodeIgniter\Filters\InvalidChars;
 use CodeIgniter\Filters\SecureHeaders;
 
+use Myth\Auth\Filters\LoginFilter; // tambahkan ini
+use Myth\Auth\Filters\PermissionFilter; // tambahkan ini
+use Myth\Auth\Filters\RoleFilter; // tambahkan ini
+
 class Filters extends BaseConfig
 {
     /**
@@ -23,8 +27,11 @@ class Filters extends BaseConfig
         'honeypot'      => Honeypot::class,
         'invalidchars'  => InvalidChars::class,
         'secureheaders' => SecureHeaders::class,
+        'login' => LoginFilter::class, // tambahkan ini
+        'role' => RoleFilter::class, // tambahkan ini
+        'permission' => PermissionFilter::class // tambahkan ini
     ];
-
+    
     /**
      * List of filter aliases that are always
      * applied before and after every request.
