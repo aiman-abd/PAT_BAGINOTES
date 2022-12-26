@@ -19,6 +19,10 @@ class Pengguna extends Migration
                 'type'       => 'VARCHAR',
                 'constraint' => '100',
             ],
+            'username' => [
+                'type'       => 'VARCHAR',
+                'constraint' => '100',
+            ],
             'email' => [
                 'type'       => 'VARCHAR',
                 'constraint' => '100',

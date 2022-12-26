@@ -37,21 +37,29 @@ $routes->set404Override();
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
 
-$routes->group('/user', function($routes){
-    $routes->get('home','UserController::index',['as'=>'user.home']);
-    $routes->get('kelas','UserController::kelas',['as'=>'user.kelas']);
-    $routes->get('catatansaya','UserController::catatansaya',['as'=>'user.catatansaya']);
-    $routes->get('pengaturan','UserController::pengaturan',['as'=>'user.pengaturan']);
+$routes->group('/auth', function ($routes) {
+    $routes->add('register', 'AuthCon::register', ['as' => 'auth.register']);
+    $routes->add('login', 'AuthCon::login', ['as' => 'auth.login']);
+    $routes->get('logout', 'AuthCon::logout', ['as' => 'auth.logout']);
+    $routes->get('forgotpassword', 'AuthCon::forgotpassword', ['as' => 'auth.forgotpassword']);
+    $routes->get('resetpassword', 'AuthCon::resetpassword', ['as' => 'auth.resetpassword']);
 });
-$routes->group('/user/kelas', function($routes){
-    $routes->get('probstat','UserController::probstat',['as'=>'user.probstat']);
+
+$routes->group('/user', function ($routes) {
+    $routes->get('home', 'UserController::index', ['as' => 'user.home']);
+    $routes->get('kelas', 'UserController::kelas', ['as' => 'user.kelas']);
+    $routes->get('catatansaya', 'UserController::catatansaya', ['as' => 'user.catatansaya']);
+    $routes->get('pengaturan', 'UserController::pengaturan', ['as' => 'user.pengaturan']);
 });
-$routes->group('/user/catatansaya', function($routes){
-    $routes->get('tambahcatatan','UserController::tambahcatatan',['as'=>'user.tambahcatatan']);
+$routes->group('/user/kelas', function ($routes) {
+    $routes->get('probstat', 'UserController::probstat', ['as' => 'user.probstat']);
 });
-$routes->group('/user/tambah', function($routes){
-    $routes->get('tambahcatatan','UserController::tambahcatatan',['as'=>'user.tambahcatatan']);
-    $routes->get('tambahkelas','UserController::tambahkelas',['as'=>'user.tambahkelas']);
+$routes->group('/user/catatansaya', function ($routes) {
+    $routes->get('tambahcatatan', 'UserController::tambahcatatan', ['as' => 'user.tambahcatatan']);
+});
+$routes->group('/user/tambah', function ($routes) {
+    $routes->get('tambahcatatan', 'UserController::tambahcatatan', ['as' => 'user.tambahcatatan']);
+    $routes->get('tambahkelas', 'UserController::tambahkelas', ['as' => 'user.tambahkelas']);
 });
 
 /*

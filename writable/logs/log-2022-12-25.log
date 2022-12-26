@@ -1,0 +1,121 @@
+CRITICAL - 2022-12-25 11:53:43 --> Undefined variable $db
+in APPPATH\Views\crud\Tambahcatatan.php on line 2.
+ 1 APPPATH\Views\crud\Tambahcatatan.php(2): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $db', 'APPPATH\\Views\\crud\\Tambahcatatan.php', 2)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\crud\\Tambahcatatan.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('crud/Tambahcatatan', [], true)
+ 5 APPPATH\Controllers\UserController.php(19): view('crud/Tambahcatatan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\UserController->tambahcatatan()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-25 12:53:17 --> Invalid file: auth/register.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('auth/register.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('auth/register', [], true)
+ 3 APPPATH\Controllers\AuthCon.php(26): view('auth/register')
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\AuthCon->register()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthCon))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-25 12:53:44 --> Invalid file: template/auth/register.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('template/auth/register.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('template/auth/register', [], true)
+ 3 APPPATH\Controllers\AuthCon.php(26): view('template/auth/register')
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\AuthCon->register()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthCon))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-25 12:53:45 --> Invalid file: template/auth/register.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('template/auth/register.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('template/auth/register', [], true)
+ 3 APPPATH\Controllers\AuthCon.php(26): view('template/auth/register')
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\AuthCon->register()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthCon))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-25 13:14:49 --> syntax error, unexpected token "("
+in APPPATH\Controllers\AuthCon.php on line 87.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(259): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\AuthCon.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(237): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\AuthCon')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\AuthCon')
+ 4 SYSTEMPATH\CodeIgniter.php(877): class_exists('\\App\\Controllers\\AuthCon', true)
+ 5 SYSTEMPATH\CodeIgniter.php(469): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-25 13:35:06 --> Undefined variable $session
+in APPPATH\Views\template\auth\viewRegister.php on line 12.
+ 1 APPPATH\Views\template\auth\viewRegister.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $session', 'APPPATH\\Views\\template\\auth\\viewRegister.php', 12)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\template\\auth\\viewRegister.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('template/auth/viewRegister', [], true)
+ 5 APPPATH\Controllers\AuthCon.php(92): view('template/auth/viewRegister')
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\AuthCon->register()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthCon))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-25 13:47:17 --> mysqli_sql_exception: Table 'stylecod_pat.user' doesn't exist in D:\PAT\PAT_BAGINOTES\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\PAT\PAT_BAGINOTES\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT 1\nFROM `...', 0)
+#1 D:\PAT\PAT_BAGINOTES\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1\nFROM `...')
+#2 D:\PAT\PAT_BAGINOTES\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1\nFROM `...')
+#3 D:\PAT\PAT_BAGINOTES\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 D:\PAT\PAT_BAGINOTES\system\Validation\Rules.php(142): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\PAT\PAT_BAGINOTES\system\Validation\Validation.php(315): CodeIgniter\Validation\Rules->is_unique('harumanwiguna1@...', 'email', Array, NULL, 'email_user')
+#6 D:\PAT\PAT_BAGINOTES\system\Validation\Validation.php(175): CodeIgniter\Validation\Validation->processRules('email_user', 'email_user', 'harumanwiguna1@...', Array, Array)
+#7 D:\PAT\PAT_BAGINOTES\system\Controller.php(140): CodeIgniter\Validation\Validation->run()
+#8 D:\PAT\PAT_BAGINOTES\app\Controllers\AuthCon.php(32): CodeIgniter\Controller->validate(Array)
+#9 D:\PAT\PAT_BAGINOTES\system\CodeIgniter.php(927): App\Controllers\AuthCon->register()
+#10 D:\PAT\PAT_BAGINOTES\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthCon))
+#11 D:\PAT\PAT_BAGINOTES\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 D:\PAT\PAT_BAGINOTES\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 D:\PAT\PAT_BAGINOTES\system\Commands\Server\rewrite.php(46): require_once('D:\\PAT\\PAT_BAGI...')
+#14 {main}
+CRITICAL - 2022-12-25 13:47:17 --> Table 'stylecod_pat.user' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT 1
+FROM `user`
+WHERE `email` = \'harumanwiguna1@gmail.com\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1
+FROM `user`
+WHERE `email` = \'harumanwiguna1@gmail.com\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1
+FROM `user`
+WHERE `email` = \'harumanwiguna1@gmail.com\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `user`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Validation\Rules.php(142): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\Validation\Validation.php(315): CodeIgniter\Validation\Rules->is_unique('harumanwiguna1@gmail.com', 'email', [...], null, 'email_user')
+ 7 SYSTEMPATH\Validation\Validation.php(175): CodeIgniter\Validation\Validation->processRules('email_user', 'email_user', 'harumanwiguna1@gmail.com', [...], [...])
+ 8 SYSTEMPATH\Controller.php(140): CodeIgniter\Validation\Validation->run()
+ 9 APPPATH\Controllers\AuthCon.php(32): CodeIgniter\Controller->validate([...])
+10 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\AuthCon->register()
+11 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthCon))
+12 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-25 18:12:24 --> Undefined variable $session
+in APPPATH\Views\template\auth\viewLogin.php on line 13.
+ 1 APPPATH\Views\template\auth\viewLogin.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $session', 'APPPATH\\Views\\template\\auth\\viewLogin.php', 13)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\template\\auth\\viewLogin.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('template/auth/viewLogin', [], true)
+ 5 APPPATH\Controllers\AuthCon.php(116): view('template/auth/viewLogin')
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\AuthCon->login()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthCon))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')

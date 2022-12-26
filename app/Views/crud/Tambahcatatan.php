@@ -1,34 +1,36 @@
+<?php
+$query_subjek = $db->query("SELECT id, subjek FROM kelas");
+$results_subjek = $query_subjek->getResultArray();
+?>
+
 <?= $this->extend('layout/dashboard-layout'); ?>
 <?= $this->section('content'); ?>
-    <div class="col-sm-12 mb-4">
-        <h3 class="m-0"><?= (isset($pageTitle)) ? $pageTitle : 'Document'; ?></h3>
-    </div>
-    <div class="card mb-4">
+<div class="col-sm-12 mb-4">
+    <h3 class="m-0"><?= (isset($pageTitle)) ? $pageTitle : 'Document'; ?></h3>
+</div>
+<div class="card mb-4">
     <div class="card-body">
-        <form action="<?php echo base_url('api/upload'); ?>" method="post" enctype="multipart/form-data">
+        <form action="<?= route_to('user.upload') ?>" method="post" enctype="multipart/form-data">
             <div class="mb-3">
                 <label for="title" class="form-label">Judul Catatan</label>
-                <input type="email" class="form-control" id="title" placeholder="Judul Catatan">
+                <input type="text" class="form-control" id="title" placeholder="Judul Catatan" name="judul" required>
             </div>
             <div class="mb-3">
                 <label for="subjek" class="form-label">Pilih Subjek</label>
-                <select class="form-select" aria-label="Default select example">
-                    <option selected>Open this select menu</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
+                <select class="form-select" aria-label="Default select example" name="subjek" required>
+                    <option selected disabled value="">--Pilih Subjek--</option>
+                    <?php foreach ($results_subjek as $row) {
+                        echo "<option value=" . $row['subjek'] . ">" . $row['subjek'] . "</option>";
+                    };
+                    ?>
                 </select>
-            </div>
-            <div class="mb-3">
-                <label for="exampleFormControlTextarea1" class="form-label">Keterangan</label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
             </div>
             <div class="mb-3">
                 <label for="formFileMultiple" class="form-label">Pilih File</label>
                 <input class="form-control" type="file" name="file" id="formFileMultiple" multiple>
             </div>
             <hr>
-            <button type="submit" class="btn btn-dark">Upload</button>
+            <input type="submit" class="btn btn-dark" value="Upload"></input>
         </form>
     </div>
 </div>

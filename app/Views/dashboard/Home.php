@@ -1,3 +1,11 @@
+<?php
+$db = \Config\Database::connect();
+
+$query_kelas = $db->query("SELECT id, subjek FROM kelas");
+$results_kelas = $query_kelas->getResultArray();
+?>
+
+
 <?= $this->extend('layout/dashboard-layout'); ?>
 <?= $this->section('content'); ?>
 <div class="row">
@@ -45,21 +53,34 @@
 
     <div class="row">
         <div class="card mb-4">
-        <div class="card-header"><strong>Kelas-Kelas</strong><span class="small ms-1"></span><span class="small ms-1"></span></div>
-            <div class="card-body">
-                <div class="col-6 col-lg-3">
-                    <div class="card" style="width: 18rem;">
-                        <img src="dist/assets/img/full.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Probabilitas dan Statistika</h5>
-                            <a href="<?= route_to('user.probstat'); ?>" class="btn btn-dark">Catatan</a>
-                        </div>
-                    </div>
-                </div>
+            <div class="card-header"><strong>Kelas-Kelas</strong><span class="small ms-1"></span><span class="small ms-1"></span></div>
+            <div class='row row-cols-1 row-cols-md-4 g-4'>
+                <?php foreach ($results_kelas as $row) {
+                    echo "<div class='col p-3'>";
+                    // echo    "<a href=".route_to('user.subjek').">";
+                    echo "<div class='card h-100'>";
+                    echo     "<img src='dist/assets/img/full.jpg' class='card-img-top' alt='...'>";
+                    echo "<div class='card-body'>";
+                    echo "<h6 class='card-title'>" . $row['subjek'] . "</h5>";
+                    echo "</div>";
+                    echo  "<div class='card-footer px-3 py-2'>
+                            <a class='btn-block text-medium-emphasis d-flex justify-content-between align-items-center' href=" . route_to('user.subjek') . ">
+                            <span class='small fw-semibold'>Lihat Catatan</span>
+                                <svg class='icon'>
+                                    <use xlink:href='dist/vendors/@coreui/icons/svg/free.svg#cil-chevron-right'></use>
+                                </svg>
+                            </a>
+                        </div>";
+                    echo "</div>";
+                    echo "</div>";
+                    //    echo  "</a>";
+                } ?>
             </div>
         </div>
     </div>
-    <!-- /.col-->
+</div>
+</div>
+<!-- /.col-->
 </div>
 <!-- /.row-->
 <?= $this->endSection(); ?>
