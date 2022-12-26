@@ -44,7 +44,7 @@ $routes->group('/auth', function ($routes) {
     $routes->get('logout', 'AuthCon::logout', ['as' => 'auth.logout']);
     $routes->get('forgotpassword', 'AuthCon::forgotpassword', ['as' => 'auth.forgotpassword']);
     $routes->get('resetpassword', 'AuthCon::resetpassword', ['as' => 'auth.resetpassword']);
-=======
+
 
 // $routes->get('/login', 'AuthController::login');
 // $routes->get('/register', 'AuthController::register');
