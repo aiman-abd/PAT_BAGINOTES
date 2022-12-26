@@ -9,7 +9,7 @@ class Pengguna extends Migration
     public function up()
     {
         $this->forge->addField([
-            'id' => [
+            'id_user' => [
                 'type'           => 'INT',
                 'constraint'     => 20,
                 'unsigned'       => true,
@@ -32,7 +32,7 @@ class Pengguna extends Migration
                 'constraint' => '255',
             ],
         ]);
-        $this->forge->addKey('id', true);
+        $this->forge->addKey('id_user', true);
         $this->forge->createTable('pengguna');
     }
 

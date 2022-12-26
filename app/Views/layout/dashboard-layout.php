@@ -101,7 +101,7 @@ $results_kelas = $query_kelas->getResultArray();
             <use xlink:href="dist/vendors/@coreui/icons/svg/free.svg#cil-settings"></use>
           </svg> Pengaturan</a></li>
     </ul>
-    <button class="sidebar-toggler" type="button" data-coreui-toggle="unfoldable"></button>
+    <!-- <button class="sidebar-toggler" type="button" data-coreui-toggle="unfoldable"></button> -->
   </div>
   <!-- Side -->
 
@@ -122,6 +122,13 @@ $results_kelas = $query_kelas->getResultArray();
           <li class="nav-item dropdown"><a class="nav-link py-0" data-coreui-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
               <div class="avatar avatar-md"><img class="avatar-img" src="dist/assets/img/avatars/8.jpg" alt="user@email.com"></div>
             </a>
+            <?php
+            $nama_pengguna = $session->get('nama_pengguna');
+            $ambil_pengguna = $db->query("SELECT nama FROM pengguna WHERE nama = '$nama_pengguna'")->getRowArray();
+
+            if ($ambil_pengguna['nama'] == $nama_pengguna ||  $nama_pengguna != $nama_pengguna) {
+              echo $ambil_pengguna['nama'];
+            } ?>
             <div class="dropdown-menu dropdown-menu-end pt-0">
               <div class="dropdown-header bg-light py-2">
                 <div class="fw-semibold">Account</div>
@@ -141,7 +148,6 @@ $results_kelas = $query_kelas->getResultArray();
       </div>
       <div class="header-divider"></div>
       <div class="container-fluid">
-        <span id="jam"></span>
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb my-0 ms-2">
 
@@ -151,6 +157,7 @@ $results_kelas = $query_kelas->getResultArray();
             <li class="breadcrumb-item active"><span><?= (isset($pageTitle)) ? $pageTitle : 'Document'; ?></span></li>
           </ol>
         </nav>
+        <span id="jam"></span>
       </div>
     </header>
     <!-- header -->
@@ -162,7 +169,7 @@ $results_kelas = $query_kelas->getResultArray();
       </div>
     </div>
     <footer class="footer">
-      <div class="ms-auto">Powered by&nbsp;<a href="<?= base_url(); ?>">Kelompok 6</a></div>
+      <div class="mx-auto">Powered by Kelompok 6</div>
     </footer>
   </div>
   <!-- CoreUI and necessary plugins-->
@@ -191,11 +198,11 @@ $results_kelas = $query_kelas->getResultArray();
     s = set(d.getSeconds());
 
     if ((h => 6) && (h <= 11)) {
-      e.innerHTML = h + ':' + m + ':' + s + 'Selamat Pagi !! ';
+      e.innerHTML = h + ':' + m + ':' + s + ' Selamat Pagi !! ';
     } else if ((h >= 11) && (h <= 15)) {
       e.innerHTML = h + ':' + m + ':' + s + ' Selamat Siang !! ';
     } else if ((h > 15) && (h <= 18)) {
-      e.innerHTML = h + ':' + m + ':' + s + 'Selamat Sore !! ';
+      e.innerHTML = h + ':' + m + ':' + s + ' Selamat Sore !! ';
     } else {
       e.innerHTML = h + ':' + m + ':' + s + ' Selamat Malam !!';
     }
