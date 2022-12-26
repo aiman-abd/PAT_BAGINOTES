@@ -75,7 +75,7 @@ $routes->group('/user/tambah', function ($routes) {
     $routes->get('tambahcatatan', 'UserController::tambahcatatan', ['as' => 'user.tambahcatatan']);
     $routes->get('tambahkelas', 'UserController::tambahkelas', ['as' => 'user.tambahkelas']);
 });
-
+$routes->get('subjek/(:num)', 'UserController::subjek/$1');
 /*
  * --------------------------------------------------------------------
  * Additional Routing

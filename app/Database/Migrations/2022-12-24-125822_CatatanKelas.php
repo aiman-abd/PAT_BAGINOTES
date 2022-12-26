@@ -15,6 +15,12 @@ class CatatanKelas extends Migration
                 'unsigned'       => true,
                 'auto_increment' => true,
             ],
+            'id_user' => [
+                'type'           => 'INT',
+                'constraint'     => 20,
+                'unsigned'       => true,
+
+            ],
             'judul' => [
                 'type'       => 'VARCHAR',
                 'constraint' => '100',

@@ -1,6 +1,7 @@
 <?php
 $db = \Config\Database::connect();
-$query_catatan = $db->query("SELECT id, judul, subjek, berkas FROM catatan_saya");
+$id_user = $session->get('id_pengguna');
+$query_catatan = $db->query("SELECT id, judul, subjek, berkas FROM catatan_saya where id_user = $id_user");
 $results_catatan = $query_catatan->getResultArray();
 ?>
 

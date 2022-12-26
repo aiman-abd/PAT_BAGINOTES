@@ -11,7 +11,7 @@ class AuthCon extends BaseController
     {
         $this->db = \Config\Database::connect();
         $this->AuthModel = new AuthModel();
-        $this->builder = $this->db->table('User');
+        $this->builder = $this->db->table('pengguna');
         $this->validation = \Config\Services::validation();
         $this->session = \Config\Services::session();
     }
@@ -38,7 +38,7 @@ class AuthCon extends BaseController
                         ],
 
                         'nama_user' => [
-                            'rules' => 'required|min_length[3]|max_length[20]|is_unique[pengguna.nama.id,{id}]',
+                            'rules' => 'required|min_length[3]|max_length[20]',
                             'errors' => [
                                 'required' => 'Nama wajib di isi',
                                 'min_length[3]' => 'Nama terlalu pendek',
@@ -156,6 +156,7 @@ class AuthCon extends BaseController
                             $data = [
 
                                 'nama_pengguna' => $cek['nama'],
+                                'id_pengguna' => $cek['id_user'],
                                 'email_pengguna' => $cek['email'],
 
                             ];
@@ -184,6 +185,7 @@ class AuthCon extends BaseController
             return redirect()->to('/user/home');
         }
     }
+
     public function logout()
     {
         $this->session->destroy();

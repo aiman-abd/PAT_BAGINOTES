@@ -101,7 +101,7 @@ $results_kelas = $query_kelas->getResultArray();
             <use xlink:href="dist/vendors/@coreui/icons/svg/free.svg#cil-settings"></use>
           </svg> Pengaturan</a></li>
     </ul>
-    <button class="sidebar-toggler" type="button" data-coreui-toggle="unfoldable"></button>
+    <!-- <button class="sidebar-toggler" type="button" data-coreui-toggle="unfoldable"></button> -->
   </div>
   <!-- Side -->
 
@@ -122,6 +122,13 @@ $results_kelas = $query_kelas->getResultArray();
           <li class="nav-item dropdown"><a class="nav-link py-0" data-coreui-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
               <div class="avatar avatar-md"><img class="avatar-img" src="dist/assets/img/avatars/8.jpg" alt="user@email.com"></div>
             </a>
+            <?php
+            $nama_pengguna = $session->get('nama_pengguna');
+            $ambil_pengguna = $db->query("SELECT nama FROM pengguna WHERE nama = '$nama_pengguna'")->getRowArray();
+
+            if ($ambil_pengguna['nama'] == $nama_pengguna ||  $nama_pengguna != $nama_pengguna) {
+              echo $ambil_pengguna['nama'];
+            } ?>
             <div class="dropdown-menu dropdown-menu-end pt-0">
               <div class="dropdown-header bg-light py-2">
                 <div class="fw-semibold">Account</div>

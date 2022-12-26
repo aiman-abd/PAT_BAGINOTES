@@ -17,7 +17,7 @@
                                         <svg class="icon">
                                             <use xlink:href="<?php echo base_url("dist/vendors/@coreui") ?>/icons/svg/free.svg#cil-user"></use>
                                         </svg></span>
-                                    <input class="form-control" type="text" placeholder="Username" name="username_user">
+                                    <input class="form-control" type="text" placeholder="Username" name="username_user" value="<?= set_value('username_user') ?>">
                                 </div>
                                 <?php
                                 if ($session->getTempdata('errorEmail')) {
@@ -29,7 +29,7 @@
                                             <use xlink:href="<?php echo base_url("dist/vendors/@coreui") ?>/icons/svg/free.svg#cil-envelope-open"></use>
 
                                         </svg></span>
-                                    <input class="form-control" type="email" placeholder="Email" name="email_user" required>
+                                    <input class="form-control" type="email" placeholder="Email" name="email_user" value="<?= set_value('email_user') ?>" required>
                                 </div>
                                 <?php
                                 if ($session->getTempdata('errorNama')) {
@@ -41,7 +41,7 @@
                                             <use xlink:href="<?php echo base_url("dist/vendors/@coreui") ?>/icons/svg/free.svg#cil-pen"></use>
 
                                         </svg></span>
-                                    <input class="form-control" type="text" placeholder="Nama anda" name="nama_user" required>
+                                    <input class="form-control" type="text" placeholder="Nama anda" name="nama_user" value="<?= set_value('nama_user') ?>" required>
                                 </div>
                                 <?php
                                 if ($session->getTempdata('errorPassword')) {
@@ -67,11 +67,14 @@
                                 </div>
                                 <button class="btn btn-block btn-success" type="input">Create Account</button>
                                 <p class="mb-0 text-sm mx-auto mt-3">
-                                Already have account?
-                                <?php
-                                echo anchor(base_url("auth/login/"), 'Login', 'class="text-info text-gradient font-weight-bold"');
-                                ?>
-                            </p>
+
+                                    Already have account?
+                                    <?php
+                                    echo anchor(base_url("auth/login/"), 'Login', 'class="text-info text-gradient font-weight-bold"');
+                                    ?>
+                                </p>
+                        </div>
+
                         </div>
                         <div class="col-12 mt-2 mt-sm-3">
                         </div>
