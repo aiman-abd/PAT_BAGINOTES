@@ -1,51 +1,80 @@
-  <body>
-    <!-- Login form -->
-    <!-- <section class="vh-100 d-flex"> -->
-      <div class="container-fluid">
-        <div class="row h-100">
-          <div class="col-4 text-black">
 
-            <div class="d-flex align-items-center h-custom-2 px-5 ms-xl-4 mt-4 pt-5 pt-xl-0 mt-xl-n5">
-    
-              <form method="POST" action="/login" role="form" style="width: 23rem;">
+<section class="text-center py-0">
+    <div class="bg-holder overlay overlay-2" style="background-image:url(<?php echo base_url('/') ?>/asset/img/bg3.jpg);"></div>
+    <!--/.bg-holder-->
+    <div class="container">
+        <div class="row min-vh-100 align-items-center">
+            <div class="col-md-8 col-lg-5 mx-auto" data-zanim-timeline="{}" data-zanim-trigger="scroll">
+                <div class="mb-2" data-zanim-xs='{"delay":0,"duration":1}'><a href="<?php echo base_url('/') ?>"><img src="<?php echo base_url('/') ?>/asset/img/logo/128x128/E-Lib Logo White.png" alt="logo" /></a></div>
+                <div class="card" data-zanim-xs='{"delay":0.1,"duration":1}'>
+                    <div class="card-body p-md-5">
+                        <h4 class="text-uppercase fs-0 fs-md-1">login with <?php echo getenv('app.name') ?></h4>
+                        <form class="text-start mt-4 needs-validation" method="POST" action="/login" role="form">
+                            <?php
+                            if ($session->getTempdata('berhasilDaftar', 10)) {
+                                echo ' <small class="text-success pl-3">' . $session->getTempdata('berhasilDaftar') . '</small>';
+                            } else if ($session->getTempdata('errorUsername', 10)) {
+                                echo ' <small class="text-danger pl-3">' . $session->getTempdata('errorUsername') . '</small>';
+                            }
+                            ?>
 
-                <h3 class="fw-normal mt-8 pb-3" style="letter-spacing: 1px;">Masuk</h3>
-                <p>Selamat datang di Bagi Notes, masukkan email dan password
-                  yang sudah didaftarkan</p>
-    
-                <div class="form-outline mb-4">
-                  <label class="form-label" for="form2Example18">Email</label>
-                  <input type="email" name="email" id="email" placeholder="Masukan email" class="form-control form-control-lg" 
-                    value="<?php if (isset($_COOKIE['login_email_cookie'])) {echo $_COOKIE['login_email_cookie']; } ?>" /> 
-                </div>
-    
-                <div class="form-outline mb-4">
-                  <label class="form-label" for="form2Example28">Password</label>
-                  <input type="password" id="password" placeholder="Masukan password" class="form-control form-control-lg" name="password" 
-                  value="<?php if (isset($_COOKIE['login_password_cookie'])) { echo $_COOKIE['login_password_cookie']; } ?>" />
-                </div>
+                            <div class="row align-items-center">
+                                <div class="col-12">
 
-                <p class="small mb-4 pb-lg-2"><a class="text-muted" href="#!">Lupa password?</a></p>
-    
-                <div class="pt-1 mb-4">
-                  <button class="btn btn-primary w-50 " type="submit" name="submit_login">Masuk</button>
-                  <br><br> 
-                  <p>Belum punya akun?
-                  <?php echo anchor('/register', 'Daftar', 'class="text-info text-gradient font-weight-bold"'); ?>
-                  </p>
+                                    <div class="input-group">
+
+                                        <?php echo csrf_field() ?>
+                                        <div class="input-group-text bg-100">
+
+                                            <span class="far fa-user"></span>
+                                        </div>
+
+                                        <input class="form-control" type="text" placeholder="Masukkan username Anda" aria-label="Text input with dropdown button" name="login_username" value="<?php if (isset($_COOKIE['login_username_cookie'])) {
+                                                                                                                                                                                                    echo $_COOKIE['login_username_cookie'];
+                                                                                                                                                                                                } ?>" />
+
+                                    </div>
+
+                                </div>
+                                <?php
+                                if ($session->getTempdata('errorPassword')) {
+                                    echo ' <small class="text-danger pl-3">' . $session->getTempdata('errorPassword') . '</small>';
+                                }
+                                ?>
+                                <div class="col-12 mt-2 mt-sm-4">
+                                    <div class="input-group">
+                                        <div class="input-group-text bg-100">
+
+                                            <span class="fas fa-lock"></span>
+                                        </div>
+
+                                        <input class="form-control" type="Password" placeholder="Password" aria-label="Text input with dropdown button" name="login_password" value="<?php if (isset($_COOKIE['login_password_cookie'])) {
+                                                                                                                                                                                            echo $_COOKIE['login_password_cookie'];
+                                                                                                                                                                                        } ?>" />
+
+                                    </div>
+                                    <small class="text-danger pl-3"><?php echo $login_pwd_msg ?></small>
+                                </div>
+                            </div>
+                            <div class="form-check form-switch align-items-center mt-3">
+                                <input class="form-check-input" type="checkbox" name="remember[]" id="remember" <?php if (isset($_COOKIE["login_username_cookie"])) { ?> checked <?php } ?>>
+                                <label class="form-check-label" for="remember">Remember me</label>
+                            </div>
+
+                            <div class="col-12 mt-2 mt-sm-3"><button class="btn btn-primary w-100" type="submit" name="submit_login">Login</button></div>
+                            <div class="card-footer text-center pt-2 px-lg-2 px-1">
+                                <p class="mb-0 text-sm mx-auto">
+                                    Don't have an account?
+                                    <?php
+                                    echo anchor('/register', 'register', 'class="text-info text-gradient font-weight-bold"');
+                                    ?> </p>
+                            </div>
+                    </div>
+                    </form>
                 </div>
-  
-              </form>
-    
             </div>
-    
-          </div>
-          <div class="col-8 px-0 d-none d-md-block p-3 bg-primary">
-          </div>
         </div>
-      </div>
-    <!-- </section> -->
+    </div>
+    </div><!-- end of .container-->
+</section>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-
-  </body>

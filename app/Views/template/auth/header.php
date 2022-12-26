@@ -1,57 +1,39 @@
 <!DOCTYPE html>
-<html lang="en-US" dir="ltr">
-<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+
+<html lang="en">
 
 <head>
+    <base href="./">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta name="description" content="CoreUI - Open Source Bootstrap Admin Template">
+    <meta name="author" content="Łukasz Holeczek">
+    <meta name="keyword" content="Bootstrap,Admin,Template,Open,Source,jQuery,CSS,HTML,RWD,Dashboard">
+    <title><?php echo getenv('app.name')   ?> | Home</title>
+    <link rel="apple-touch-icon" sizes="57x57" href=<?php echo base_url("dist/assets/img/64x64//Logo Icon Light.png") ?>>
+    <link rel="apple-touch-icon" sizes="60x60" href="<?php echo base_url("dist/assets/img/64x64/Logo Icon Light.png") ?>">
 
-    <!-- ===============================================-->
-    <!--    Document Title-->
-    <!-- ===============================================-->
-    <title><?php echo getenv('app.name')  ?> | Authorize</title>
-    <link rel="icon" type="image/png" sizes="128x128" href="dist/assets/img/128x128/Logo Icon Dark.png">
-    <link rel="manifest" href="dist/assets/favicon/manifest.json">
+    <link rel="icon" type="image/png" sizes="32x32" href="<?php echo base_url("dist/assets/img/32x32/Logo Icon Light.png") ?>">
+
+    <link rel="icon" type="image/png" sizes="16x16" href="<?php echo base_url("dist/assets/img/16x16/Logo Icon Light.png") ?>">
+
     <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="dist/assets/img/256x256/Logo Icon Dark.png">
+    <meta name="msapplication-TileImage" content="<?php echo base_url("dist/assets/img/256x256/Logo Icon Light.png") ?>">
     <meta name="theme-color" content="#ffffff">
+    <!-- Vendors styles-->
+    <link rel="stylesheet" href="<?php echo base_url("dist/vendors/simplebar/css/simplebar.css") ?>">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
+    <!-- Main styles for this application-->
 
-    <!-- ===============================================-->
-    <!--    Favicons-->
-    <!-- ===============================================-->
-    <link rel="shortcut icon" type="image/x-icon" href="<?php echo base_url('asset/') ?>/img/logo/16x16/E-Lib Logo White.png">
-    <!-- <link rel="manifest" href="<?php echo base_url('asset/') ?>assets/img/favicons/manifest.json">
-    <meta name="msapplication-TileImage" content="<?php echo site_url('/asset/') ?>assets/img/favicons/mstile-150x150.png"> -->
-    <meta name="theme-color" content="#ffffff">
-    <script src="<?php echo base_url('vendor') ?>/overlayscrollbars/OverlayScrollbars.min.js"></script>
+    <link rel="stylesheet" href="<?php echo base_url("dist/css/style.css") ?>">
+    <link rel="stylesheet" href="<?php echo base_url("dist/css/examples.css") ?>">
+    <!-- We use those styles to show code examples, you should remove them in your application.-->
+    <link rel="stylesheet" href="<?php echo base_url("/prism/prism.css") ?>">
 
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.17/dist/sweetalert2.min.css"> -->
-    <!-- ===============================================-->
-    <!--    Stylesheets-->
-    <!-- ===============================================-->
-    <link href="<?php echo base_url('') ?>/vendor/hamburgers/hamburgers.min.css" rel="stylesheet">
-    <link href="<?php echo base_url('asset/css/') ?>/loaders.css/loaders.min.css" rel="stylesheet">
-    <link href="<?php echo base_url('asset/css/') ?>/theme.min.css" rel="stylesheet" />
-    <link href="<?php echo base_url('asset/css/') ?>/user.min.css" rel="stylesheet" />
-    <link rel="preconnect" href="https://fonts.googleapis.com/">
-    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&amp;family=Open+Sans:wght@300;400;600;700;800&amp;display=swap" rel="stylesheet">
+    <!-- Global site tag (gtag.js) - Google Analytics-->
+
+
 </head>
 
-<body>
-    <!-- ===============================================-->
-    <!--    Main Content-->
-    <!-- ===============================================-->
-    <main class="main" id="top">
-        <!-- <div class="preloader" id="preloader">
-            <div class="loader">
-                <div class="line-scale">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                </div>
-            </div> -->
-        </div>
+
