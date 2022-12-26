@@ -6,7 +6,7 @@ use CodeIgniter\Model;
 class Model_catatan extends Model
 {
     protected $DBGroup          = 'default';
-    protected $table            = 'bagi_notes';
+    protected $table            = 'catatan_saya';
     protected $primaryKey       = 'id';
     protected $useAutoIncrement = true;
     protected $insertID         = 0;

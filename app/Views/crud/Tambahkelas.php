@@ -5,10 +5,10 @@
     </div>
     <div class="card mb-4">
     <div class="card-body">
-        <form action="<?php echo base_url('api/upload'); ?>" method="post" enctype="multipart/form-data">
+        <form action="<?= route_to('user.uploadkelas') ?>" method="post" enctype="multipart/form-data">
             <div class="mb-3">
                 <label for="title" class="form-label">Nama Kelas / Mata Kuliah</label>
-                <input type="email" class="form-control" id="title" placeholder="Nama Kelas">
+                <input type="text" class="form-control" id="title" placeholder="Nama Kelas" name="subjek" required>
             </div>
             <button type="submit" class="btn btn-dark">Upload</button>
         </form>

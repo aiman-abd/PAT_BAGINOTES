@@ -1,13 +1,11 @@
 <?php
 
 namespace App\Controllers;
-
-use App\Controllers\BaseController;
-use App\Models\Model_catatan;
-
+use App\Models\UserModel;
 
 class UserController extends BaseController
 {
+
     public function __construct()
     {
         $this->db = \Config\Database::connect();
@@ -132,3 +130,4 @@ class UserController extends BaseController
         }
     }
 }
+

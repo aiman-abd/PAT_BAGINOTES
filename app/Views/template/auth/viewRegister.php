@@ -67,11 +67,14 @@
                                 </div>
                                 <button class="btn btn-block btn-success" type="input">Create Account</button>
                                 <p class="mb-0 text-sm mx-auto mt-3">
+
                                     Already have account?
                                     <?php
                                     echo anchor(base_url("auth/login/"), 'Login', 'class="text-info text-gradient font-weight-bold"');
                                     ?>
                                 </p>
+                        </div>
+
                         </div>
                         <div class="col-12 mt-2 mt-sm-3">
                         </div>
