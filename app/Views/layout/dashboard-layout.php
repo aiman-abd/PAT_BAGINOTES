@@ -141,7 +141,6 @@ $results_kelas = $query_kelas->getResultArray();
       </div>
       <div class="header-divider"></div>
       <div class="container-fluid">
-        <span id="jam"></span>
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb my-0 ms-2">
 
@@ -151,6 +150,7 @@ $results_kelas = $query_kelas->getResultArray();
             <li class="breadcrumb-item active"><span><?= (isset($pageTitle)) ? $pageTitle : 'Document'; ?></span></li>
           </ol>
         </nav>
+        <span id="jam"></span>
       </div>
     </header>
     <!-- header -->
