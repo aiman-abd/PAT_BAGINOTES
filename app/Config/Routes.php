@@ -37,12 +37,26 @@ $routes->set404Override();
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
 
+
 $routes->group('/auth', function ($routes) {
     $routes->add('register', 'AuthCon::register', ['as' => 'auth.register']);
     $routes->add('login', 'AuthCon::login', ['as' => 'auth.login']);
     $routes->get('logout', 'AuthCon::logout', ['as' => 'auth.logout']);
     $routes->get('forgotpassword', 'AuthCon::forgotpassword', ['as' => 'auth.forgotpassword']);
     $routes->get('resetpassword', 'AuthCon::resetpassword', ['as' => 'auth.resetpassword']);
+=======
+
+// $routes->get('/login', 'AuthController::login');
+// $routes->get('/register', 'AuthController::register');
+
+$routes->get('/login', 'Auth::login');
+$routes->post('/login', 'Auth::loginSave');
+$routes->get('/register', 'Auth::register');
+$routes->post('/register', 'Auth::save');
+$routes->get('/logout', 'Auth::logout');
+
+
+
 });
 
 $routes->group('/user', function ($routes) {

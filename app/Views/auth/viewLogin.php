@@ -1,9 +1,4 @@
-<?php
-$login_pwd_msg = "";
-$login_username_msg = "";
-$login_username_valid = false;
-$login_password_valid = false;
-?>
+
 <section class="text-center py-0">
     <div class="bg-holder overlay overlay-2" style="background-image:url(<?php echo base_url('/') ?>/asset/img/bg3.jpg);"></div>
     <!--/.bg-holder-->
@@ -82,3 +77,4 @@ $login_password_valid = false;
     </div>
     </div><!-- end of .container-->
 </section>
+
