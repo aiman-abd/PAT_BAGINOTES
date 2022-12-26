@@ -162,7 +162,7 @@ $results_kelas = $query_kelas->getResultArray();
       </div>
     </div>
     <footer class="footer">
-      <div class="ms-auto">Powered by&nbsp;<a href="<?= base_url(); ?>">Kelompok 6</a></div>
+      <div class="mx-auto">Powered by Kelompok 6</div>
     </footer>
   </div>
   <!-- CoreUI and necessary plugins-->
@@ -191,11 +191,11 @@ $results_kelas = $query_kelas->getResultArray();
     s = set(d.getSeconds());
 
     if ((h => 6) && (h <= 11)) {
-      e.innerHTML = h + ':' + m + ':' + s + 'Selamat Pagi !! ';
+      e.innerHTML = h + ':' + m + ':' + s + ' Selamat Pagi !! ';
     } else if ((h >= 11) && (h <= 15)) {
       e.innerHTML = h + ':' + m + ':' + s + ' Selamat Siang !! ';
     } else if ((h > 15) && (h <= 18)) {
-      e.innerHTML = h + ':' + m + ':' + s + 'Selamat Sore !! ';
+      e.innerHTML = h + ':' + m + ':' + s + ' Selamat Sore !! ';
     } else {
       e.innerHTML = h + ':' + m + ':' + s + ' Selamat Malam !!';
     }
